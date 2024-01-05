@@ -1,0 +1,19 @@
+.about .about-me {
+    max-width: calc(980px + (80px * 2));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about .about-me h2 {
+    display: none !important;
+}
+
+@media screen and (max-width: 500px) {
+    .about .about-me {
+        margin-top: 8rem !important;
+    }
+
+    .about .working-process {
+        display: block;
+    }
+}

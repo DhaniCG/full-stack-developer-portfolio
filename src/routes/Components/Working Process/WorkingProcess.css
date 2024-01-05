@@ -1,0 +1,128 @@
+.working-process .process {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.process .step {
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.30);
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.10) 0%, rgba(217, 217, 217, 0.05) 51.56%, rgba(217, 217, 217, 0.10) 100%);
+    text-align: center;
+    max-width: calc(100% - 1.8rem);
+    width: 285px;
+    padding: 0.9rem;
+}
+
+.step {
+    position: relative;
+}
+
+.step img {
+    border-radius: 12px;
+    width: 100%;
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    margin: 1.1rem 0;
+}
+
+.step p {
+    color: #CBCBCB;
+    font-size: 1rem;
+    margin-bottom: 0.6rem
+}
+
+/* Particle Styles */
+
+.working-process .particles {
+    position: absolute;
+    right: -125px;
+    top: -95px;
+}
+
+.working-process .particles img {
+    opacity: 20%;
+}
+
+.working-process .particles img {
+    width: 300px;
+}
+
+.working-process .particles .mask,
+.working-process .particles .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.working-process .particles .mask {
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.working-process .particles .bg {
+    background-size: 100% 200%;
+    animation: particle-color-effect 2.5s linear infinite;
+}
+
+.working-process .particles .base-particle .bg {
+    top: 0%;
+    transform: translateY(-100%);
+    background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff80 100%);
+    background-size: contain;
+    height: 50%;
+    animation: base-color-effect 10s linear infinite 10s;
+}
+
+.working-process .particles .base-particle {
+    mask-image: url(/working-process-particle-base.png);
+    -webkit-mask-image: url(/working-process-particle-base.png);
+}
+
+.working-process .particles .base-particle {
+    mask-image: url(/working-process-particle-base.png);
+    -webkit-mask-image: url(/working-process-particle-base.png);
+}
+
+.working-process .particles .white-particle .bg {
+    background-image: var(--particle-white-col);
+    animation-duration: 5s;
+}
+
+.working-process .particles .white-particle {
+    mask-image: url(/working-process-particle-white.png);
+    -webkit-mask-image: url(/working-process-particle-white.png);
+}
+
+.working-process .particles .white-particle {
+    mask-image: url(/working-process-particle-white.png);
+    -webkit-mask-image: url(/working-process-particle-white.png);
+}
+
+.working-process .particles .rainbow-particle .bg {
+    background-image: var(--particle-rainbow-col);
+}
+
+.working-process .particles .rainbow-particle {
+    mask-image: url(/working-process-particle-rainbow.png);
+    -webkit-mask-image: url(/working-process-particle-rainbow.png);
+}
+
+.working-process .particles .rainbow-particle {
+    mask-image: url(/working-process-particle-rainbow.png);
+    -webkit-mask-image: url(/working-process-particle-rainbow.png);
+}
+
+@media screen and (max-width: 1065px) {
+    .working-process .particles {
+        display: none;
+    }
+}

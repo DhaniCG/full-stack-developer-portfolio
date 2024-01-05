@@ -1,0 +1,81 @@
+.case-study .max-width-wrapper {
+    max-width: calc(1000px + 5rem);
+}
+
+.case-study h3 {
+    font-size: 1.3rem;
+    margin: 45px 0 15px;
+    letter-spacing: 0.03em;
+}
+
+.case-study p,
+.case-study li {
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+
+.case-study p {
+    font-weight: 300;
+}
+
+.case-study ul {
+    padding-left: 26px;
+}
+
+.case-study li {
+    font-weight: 500;
+    padding: 3px 0;
+}
+
+.case-study img {
+    border-radius: 10px;
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.case-study .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 0 1.8rem;
+    margin-top: 60px;
+}
+
+.case-study .btns .btn {
+    display: flex;
+    justify-content: center;
+    width: 210px;
+}
+
+.case-study .btn.secondary {
+    gap: 0.8rem;
+}
+
+.case-study .btn.secondary img {
+    width: 28px;
+    margin: 0;
+}
+
+@media screen and (max-width: 510px) {
+    .case-study .btns {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .case-study p,
+    .case-study li {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .case-study img {
+        width: 100%;
+        margin-top: 40px;
+    }
+}

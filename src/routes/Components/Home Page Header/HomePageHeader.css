@@ -1,0 +1,117 @@
+header .pictures {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    height: 590px;
+    margin-top: -75px;
+}
+
+header .pictures .bg-image {
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 50vw;
+    height: 590px;
+    z-index: 1;
+}
+
+header .pictures .left {
+    left: 0;
+}
+
+header .pictures .right {
+    right: 0;
+}
+
+header .pictures .self-pic {
+    position: relative;
+    width: auto;
+    height: calc(100% - 75px);
+    z-index: 5;
+}
+
+header .pictures .black-transition {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top, black 0%, transparent 40%);
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+
+header .introduction {
+    position: relative;
+    text-align: center;
+    margin-top: -8px;
+    z-index: 10;
+}
+
+header .introduction  * {
+    margin: 0;
+}
+
+header .introduction .hey {
+    font-size: 1.4rem;
+}
+
+header .introduction .name {
+    font-size: 2rem;
+}
+
+header .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 3.2rem;
+}
+
+header .cta .primary {
+    font-weight: 500;
+}
+
+header .cta .secondary {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 590px) {
+    header .pictures {
+        height: unset;
+        padding-top: 75px;
+    }
+
+    header .pictures .bg-image {
+        display: none;
+    }
+
+    header .pictures .self-pic {
+        width: 100%;
+        max-width: 472px;
+        height: auto;
+    }
+
+    header .introduction .hey {
+        font-size: 1.1rem;
+    }
+
+    header .introduction .name {
+        font-size: 1.4rem;
+    }
+
+    header .introduction h1 {
+        font-size: 1.5rem;
+    }
+
+    header .cta {
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    header .cta .primary {
+        font-weight: 400;
+    }
+}

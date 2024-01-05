@@ -1,0 +1,548 @@
+@keyframes rainbow-effect {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+#services {
+    scroll-margin-top: 100px;
+}
+
+.services h2 {
+    margin-bottom: 2rem;
+}
+
+/* Toggle */
+
+.rate-choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: #CBCBCB;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.rate-choices .option {
+    position: relative;
+    transition: ease-in-out 250ms;
+}
+
+.rate-choices .option.active {
+    color: white;
+}
+
+.rate-choices .wrapper {
+    border-radius: 10rem;
+    background-color: #CBCBCB;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.rate-choices.on .wrapper {
+    background-image: var(--rainbow-col-move);
+    background-size: 200% 100%;
+    animation: rainbow-effect 2.5s linear infinite;
+}
+
+.rate-choices .toggle {
+    width: 40px;
+    height: 24px;
+}
+
+.rate-choices .inner-toggle {
+    border-radius: 10rem;
+    position: relative;
+    background-color: black;
+    height: 100%;
+}
+
+.rate-choices .toggle-ball {
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    transition: ease-in-out 250ms;
+}
+
+.rate-choices.on .toggle-ball {
+    left: calc(100% - 15px - 2px);
+}
+
+.rate-choices .inner-toggle-ball {
+    border-radius: 100%;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.rate-choices .line-1,
+.rate-choices .line-2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 2px;
+}
+
+.rate-choices .line-1 {
+    right: calc(100% + 35px);
+    background-image: linear-gradient(to left, #ffffff33, transparent);
+}
+
+.rate-choices .line-2 {
+    left: calc(100% + 35px);
+    background-image: linear-gradient(to right, #ffffff33, transparent);
+}
+
+/* Services */
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.service-list .service-item:not(.special) {
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+    gap: 0.9rem;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.10) 0%, rgba(217, 217, 217, 0.05) 50.52%, rgba(217, 217, 217, 0.10) 100%);
+    max-width: 320px;
+    min-height: 560px;
+    padding: 1rem 2rem;
+}
+
+.service-list .service-item.special {
+    position: relative;
+    text-align: center;
+    width: 620px;
+    padding: 8rem 2rem 0;
+}
+
+.service-item hr {
+    border-width: 1px;
+    border-color: #ffffff80;
+    width: 100%;
+    margin: 0;
+}
+
+.service-item .current-service {
+    position: relative;
+    padding-right: 24px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.current-service img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 20px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: ease-in-out 250ms;
+}
+
+.current-service.switched img {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.service-item .service-name {
+    font-size: 24px;
+    font-weight: 600;
+    height: fit-content;
+    margin: 0;
+    overflow: hidden;
+    transition: ease-in-out 250ms;
+}
+
+.service-item .service-name.inactive {
+    height: 0;
+}
+
+.service-item.special .service-name {
+    font-size: 4.375rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.service-item.special p {
+    color: #CBCBCB;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 380px;
+    margin: 1.4rem auto 2.2rem;
+    margin-bottom: 2.2rem;
+}
+
+
+.service-item.special a.rainbow-btn.primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 260px;
+    margin: auto;
+}
+
+.service-pricing .service-rate {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.service-item .service-pricing {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-pricing .service-rate.hourly,
+.current-service h3.front-end {
+    position: relative;
+    bottom: 0%;
+    left: 0;
+    transition: ease-in-out 250ms;
+}
+
+.service-pricing.switched .service-rate.hourly,
+.current-service.switched h3.front-end {
+    bottom: 100%;
+}
+
+.service-pricing .service-rate.project,
+.current-service h3.back-end {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: ease-in-out 250ms;
+}
+
+.service-pricing.switched .service-rate.project,
+.current-service.switched h3.back-end {
+    top: 0%;
+}
+
+.service-pricing .service-rate .price .front-end {
+    display: inline;
+}
+
+.service-pricing .service-rate .price.switched .front-end {
+    display: none;
+}
+
+.service-pricing .service-rate .price .back-end {
+    display: none;
+}
+
+.service-pricing .service-rate .price.switched .back-end {
+    display: inline;
+}
+
+.service-pricing .service-rate .price {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+/* .service-pricing .service-rate .front-end {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.service-pricing .service-rate .back-end {
+    position: absolute;
+    top: 100%;
+    left: 0;
+} */
+
+.service-item .service-features {
+    flex: 1 0 auto;
+    padding: 0;
+    margin: 0;
+}
+
+.service-item .service-features::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.service-features li {
+    list-style-type: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 4px 0;
+}
+
+.service-features li:not(.rainbow-text) {
+    color: #CBCBCB;
+}
+
+.service-features li.rainbow-text {
+    font-weight: 700;
+}
+
+.cta-btn hr {
+    margin: 0.9rem 0;
+}
+
+.cta-btn .rate-info {
+    overflow: hidden;
+}
+
+.cta-btn p {
+    position: relative;
+    top: 1rem;
+    color: #CBCBCB;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+    transition: ease-in-out 250ms;
+}
+
+.cta-btn.on p {
+    top: 0rem;
+}
+
+.cta-btn a.btn.secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.9rem;
+}
+
+.cta-btn a.btn.secondary img,
+.service-item.special a.rainbow-btn.primary img {
+    position: relative;
+    left: 0px;
+    transition: ease-in-out 250ms;
+}
+
+.cta-btn a.btn.secondary:hover img,
+.service-item.special a.rainbow-btn.primary:hover img {
+    left: 5px;
+}
+
+/* Particles */
+
+.service-item.special .particles {
+    position: absolute;
+    top: 10%;
+}
+
+.service-item.special .particles img {
+    opacity: 20%;
+    width: 86px;
+}
+
+.service-item.special .particles.left {
+    left: -15%;
+}
+
+.service-item.special .particles.right {
+    right: -15%;
+}
+
+.service-item.special .particles .mask,
+.service-item.special .particles .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.service-item.special .particles .mask {
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.service-item.special .particles .bg {
+    background-size: 100% 200%;
+    animation: particle-color-effect 2.5s linear infinite;
+}
+
+.service-item.special .particles .base-particle .bg {
+    top: 0%;
+    transform: translateY(-100%);
+    background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff80 100%);
+    background-size: contain;
+    height: 50%;
+    animation: base-color-effect 15s linear infinite 10s;
+}
+
+.service-item.special .particles.left .base-particle {
+    mask-image: url(/particle-base-left-s.png);
+    -webkit-mask-image: url(/particle-base-left-s.png);
+}
+
+.service-item.special .particles.right .base-particle {
+    mask-image: url(/particle-base-right-s.png);
+    -webkit-mask-image: url(/particle-base-right-s.png);
+}
+
+.service-item.special .particles .white-particle .bg {
+    background-image: var(--particle-white-col);
+    animation-duration: 5s;
+}
+
+.service-item.special .particles.left .white-particle {
+    mask-image: url(/particle-white-left-s.png);
+    -webkit-mask-image: url(/particle-white-left-s.png);
+}
+
+.service-item.special .particles.right .white-particle {
+    mask-image: url(/particle-white-right-s.png);
+    -webkit-mask-image: url(/particle-white-right-s.png);
+}
+
+.service-item.special .particles .rainbow-particle .bg {
+    background-image: var(--particle-rainbow-col);
+}
+
+.service-item.special .particles.left .rainbow-particle {
+    mask-image: url(/particle-rainbow-left-s.png);
+    -webkit-mask-image: url(/particle-rainbow-left-s.png);
+}
+
+.service-item.special .particles.right .rainbow-particle {
+    mask-image: url(/particle-rainbow-right-s.png);
+    -webkit-mask-image: url(/particle-rainbow-right-s.png);
+}
+
+@media screen and (max-width: 895px) {
+    .service-item.special .particles {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 895px) and (min-width: 706px) {
+    .service-list .service-item,
+    .service-list .service-item.special {
+        border-radius: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0;
+        gap: 0.9rem;
+        background: linear-gradient(180deg, rgba(217, 217, 217, 0.10) 0%, rgba(217, 217, 217, 0.05) 50.52%, rgba(217, 217, 217, 0.10) 100%);
+        max-width: 320px;
+        width: 320px;
+        min-width: 320px;
+        min-height: 560px;
+        padding: 1rem 2rem;
+    }
+    
+    .service-list .service-item.special {
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .service-list .service-item.special > * {
+        margin: 0 !important;
+    }
+
+    .service-item.special .service-name {
+        font-size: 2.1rem;
+    }
+    
+    .service-item.special p {
+        font-size: 0.8rem;
+        width: 90%;
+    }
+    
+    .service-item.special a.rainbow-btn.primary {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 706px) {
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-list .service-item {
+        width: 310px;
+    }
+    
+    .service-list .service-item.special {
+        width: 460px;
+        padding: 0.8rem 0 0;
+    }
+
+    .service-item.special .service-name {
+        font-size: 3.4rem;
+    }
+
+    .service-item.special p {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    .service-item.special a.rainbow-btn.primary {
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .rate-choices .line-1,
+    .rate-choices .line-2 {
+        display: none;
+    }
+
+    .service-list .service-item:not(.special) {
+        padding: 1rem;
+    }
+
+    .service-list .service-item,
+    .service-list .service-item.special {
+        width: 260px;
+    }
+
+    .service-item .service-name {
+        font-size: 22px;
+    }
+
+    .service-item.special .service-name {
+        font-size: 2.1rem;
+    }
+
+    .service-pricing .service-rate .price {
+        font-size: 2.6rem;
+    }
+
+    .service-item.special p {
+        font-size: 0.8rem;
+    }
+
+    .service-item.special a.rainbow-btn.primary,
+    .cta-btn a.btn.secondary {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,31 @@
+.legal.max-width-wrapper {
+    max-width: 1200px;
+}
+
+.legal h2 {
+    color: white !important;
+    background-image: linear-gradient(white, white);
+    text-align: left;
+    margin: 3rem auto 1rem;
+}
+
+.legal h3 {
+    font-size: 1.4rem;
+}
+
+.legal h4 {
+    font-size: 1.2rem;
+}
+
+.legal i {
+    font-size: 0.8rem;
+}
+
+.legal p,
+.legal li {
+    letter-spacing: 0.03em;
+}
+
+.legal p {
+    line-height: 1.4;
+}

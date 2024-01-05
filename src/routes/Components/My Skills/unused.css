@@ -1,0 +1,69 @@
+@keyframes glow-line-move {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        top: 100px;
+        left: 50%;
+    }
+    
+    10% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        top: 100px;
+        left: calc(100% - 300px);
+    }
+
+    23.33% {
+        transform: translate(-50%, -50%) rotate(90deg);
+        top: 100px;
+        left: calc(100% - 300px);
+    }
+
+    36.66% {
+        transform: translate(-50%, -50%) rotate(90deg);
+        top: 100px;
+        left: calc(100% - 100px);
+    }
+
+    73.32% {
+        transform: translate(-50%, -50%) rotate(180deg);
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+    }
+
+    90% {
+        transform: translate(-50%, -50%) rotate(180deg);
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+    }
+}
+
+.my-skills .glow-line-mask {
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    position: absolute;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: xor;
+    inset: 0; /* inset will set the position of the element, or replacement of top, bottom, left, and right */ 
+    width: 100%;
+    height: 100%;
+}
+
+.my-skills .glow-line {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-image: var(--glow-line-rainbow-col);
+    width: 400px;
+    height: 400px;
+    /* animation: glow-line-move 20s linear infinite; */
+}
+
+/* HTML */
+
+/* 
+<div className="glow-line-mask">
+    <div className="glow-line"></div>
+</div>
+ */

@@ -1,0 +1,184 @@
+.projects {
+    position: relative;
+}
+
+.projects-container .project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-item .project-details {
+    max-width: 500px;
+}
+
+.project-item img {
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: top center;
+    max-width: 480px;
+    width: 40%;
+}
+
+.project-details h3 {
+    font-size: 1.6rem;
+    margin: 0;
+    margin-bottom: 1.4rem;
+}
+
+.project-details .description {
+    color: #e4e4e4;
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.project-details .description p {
+    margin: 0 0 0.8rem;
+}
+
+.project-details .description strong {
+    color: white;
+}
+
+.project-details .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0;
+}
+
+.project-details .technologies div {
+    border-radius: 8px;
+    border: 2px solid white;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    padding: 4px 10px;
+}
+
+.project-details .btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 24px;
+}
+
+/* Particle Styles */
+
+.projects .particles {
+    position: absolute;
+    left: 6px;
+    bottom: -54px;
+}
+
+.projects .particles img {
+    opacity: 20%;
+}
+
+.projects .particles img {
+    width: 215px;
+}
+
+.projects .particles .mask,
+.projects .particles .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.projects .particles .mask {
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.projects .particles .bg {
+    background-size: 100% 200%;
+    animation: particle-color-effect 2.5s linear infinite;
+}
+
+.projects .particles .base-particle .bg {
+    top: 0%;
+    transform: translateY(-100%);
+    background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff80 100%);
+    background-size: contain;
+    height: 50%;
+    animation: base-color-effect 6s linear infinite 10s;
+}
+
+.projects .particles .base-particle {
+    mask-image: url(/home-project-particle-base.png);
+    -webkit-mask-image: url(/home-project-particle-base.png);
+}
+
+.projects .particles .white-particle .bg {
+    background-image: var(--particle-white-col);
+    animation-duration: 5s;
+}
+
+.projects .particles .white-particle {
+    mask-image: url(/home-project-particle-white.png);
+    -webkit-mask-image: url(/home-project-particle-white.png);
+}
+
+.projects .particles .rainbow-particle .bg {
+    background-image: var(--particle-rainbow-col);
+}
+
+.projects .particles .rainbow-particle {
+    mask-image: url(/home-project-particle-rainbow.png);
+    -webkit-mask-image: url(/home-project-particle-rainbow.png);
+}
+
+@media screen and (max-width: 1065px) {
+    .projects .particles {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .projects-container .project-item {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .project-item img {
+        max-width: unset;
+        width: 428px;
+    }
+
+    .project-details .technologies,
+    .project-details .btns {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .projects-container .project-item {
+        margin-bottom: 2.8rem;
+    }
+
+    .project-item img {
+        max-width: calc(100% - 1.8rem);
+        width: 320px;
+        margin-bottom: 0rem;
+    }
+
+    .project-details h3 {
+        font-size: 1.25rem;
+        margin: 0;
+        margin-bottom: 1.2rem;
+    }
+
+    .project-details .description {
+        font-size: 0.9rem;
+    }
+}

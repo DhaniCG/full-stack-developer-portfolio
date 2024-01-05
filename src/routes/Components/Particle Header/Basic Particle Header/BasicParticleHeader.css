@@ -1,0 +1,96 @@
+.basic-particle {
+    border-image: linear-gradient(90deg, #FFFFFF00 0%, #FFFFFF99 50%, #FFFFFF00 100%) 1;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    height: 240px;
+    padding: 1.2rem;
+    overflow: hidden;
+}
+
+.basic-particle h1 {
+    position: relative;
+    font-weight: 800;
+    text-align: center;
+    z-index: 5;
+}
+
+.basic-particle .particles,
+.basic-particle .particles * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.basic-particle .particles .mask {
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: 1440px;
+    -webkit-mask-size: 1440px;
+    mask-repeat: repeat;
+    -webkit-mask-repeat: repeat;
+    overflow: hidden;
+}
+
+.basic-particle .particles .bg {
+    background-size: 100% 200%;
+    animation: particle-color-effect 2.5s linear infinite;
+}
+
+.basic-particle .particles .base-particle .bg {
+    top: 0%;
+    transform: translateY(-100%);
+    background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff80 100%);
+    background-size: contain;
+    height: 50%;
+    /* animation: base-color-effect 15s linear infinite 20s; */
+}
+
+.basic-particle .particles .main-particle {
+    background-image: url(/header-particle-base.png);
+    background-position: center;
+    background-size: 1440px;
+    background-repeat: repeat;
+    opacity: 20%;
+}
+
+.basic-particle .particles .base-particle {
+    mask-image: url(/header-particle-base.png);
+    -webkit-mask-image: url(/header-particle-base.png);
+}
+
+.basic-particle .particles .white-particle .bg {
+    background-image: var(--particle-white-col);
+    animation-duration: 5s;
+}
+
+.basic-particle .particles .white-particle {
+    mask-image: url(/header-particle-white.png);
+    -webkit-mask-image: url(/header-particle-white.png);
+}
+
+.basic-particle .particles .rainbow-particle .bg {
+    background-image: var(--particle-rainbow-col);
+}
+
+.basic-particle .particles .rainbow-particle {
+    mask-image: url(/header-particle-rainbow.png);
+    -webkit-mask-image: url(/header-particle-rainbow.png);
+}
+
+@media screen and (max-width: 500px) {
+    .basic-particle {
+        height: 200px;
+    }
+
+    .basic-particle h1 {
+        font-size: 2.6rem;
+    }
+}

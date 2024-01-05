@@ -1,0 +1,38 @@
+.error-page {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.error-page h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+.error-page h3 {
+    font-size: 2rem;
+    margin: -20px 0 0;
+}
+
+.error-page p {
+    font-size: 0.9rem;
+    margin-bottom: 2.6rem;
+    opacity: 80%;
+}
+
+.error-page .btn {
+    gap: 1rem;
+    width: max-content !important;
+    padding: 1rem;
+    margin: auto;
+}

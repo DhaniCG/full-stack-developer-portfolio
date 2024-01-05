@@ -1,0 +1,221 @@
+.about-me {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+.about-me .desktop {
+    display: block;
+}
+
+.about-me .tablet {
+    display: none;
+}
+
+.about-me .image-wrapper {
+    position: relative;
+}
+
+.about-me img {
+    border-radius: 20px;
+    border: 2px solid #555;
+    width: 358px;
+}
+
+.about-me .about-details,
+.about-me h2 {
+    text-align: left;
+}
+
+.about-me h2 {
+    margin: 0;
+    margin-bottom: 1.4rem;
+}
+
+.about-details p {
+    color: #e4e4e4;
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    margin: 0 0 0.8rem;
+}
+
+.about-details strong {
+    color: white;
+}
+
+/* Particle */
+
+.about-me .particles {
+    position: absolute;
+}
+
+.about-me .particles img {
+    border-radius: 0;
+    border: 0 solid transparent;
+    width: 395px;
+    opacity: 20%;
+}
+
+.about-me .particles.top img {
+    width: 68px;
+}
+
+.about-me .particles.bottom img {
+    width: 214px;
+}
+
+.about-me .particles.top {
+    top: -80px;
+    right: -50px;
+}
+
+.about-me .particles.bottom {
+    bottom: -50px;
+    left: -80px;
+}
+
+.about-me .particles .mask,
+.about-me .particles .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.about-me .particles .mask {
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.about-me .particles.top .base-particle .bg {
+    height: 100%;
+}
+
+.about-me .particles.bottom .base-particle .bg {
+    height: 200%;
+}
+
+.about-me .particles .bg {
+    background-size: 100% 200%;
+    animation: particle-color-effect 2.5s linear infinite;
+}
+
+.about-me .particles .base-particle .bg {
+    top: 0%;
+    transform: translateY(-100%);
+    background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff80 100%);
+    background-size: contain;
+    height: 50%;
+}
+
+.about-me .particles.top .base-particle .bg {
+    animation: base-color-effect 6s linear infinite 8s;
+}
+
+.about-me .particles.bottom .base-particle .bg {
+    animation: base-color-effect 4s linear infinite 10s;
+}
+
+.about-me .particles.top .base-particle {
+    mask-image: url(/about-particle-base-top.png);
+    -webkit-mask-image: url(/about-particle-base-top.png);
+}
+
+.about-me .particles.bottom .base-particle {
+    mask-image: url(/about-particle-base-bottom.png);
+    -webkit-mask-image: url(/about-particle-base-bottom.png);
+}
+
+.about-me .particles .white-particle .bg {
+    background-image: var(--particle-white-col);
+    animation-duration: 5s;
+}
+
+.about-me .particles.top .white-particle {
+    mask-image: url(/about-particle-white-top.png);
+    -webkit-mask-image: url(/about-particle-white-top.png);
+}
+
+.about-me .particles.bottom .white-particle {
+    mask-image: url(/about-particle-white-bottom.png);
+    -webkit-mask-image: url(/about-particle-white-bottom.png);
+}
+
+.about-me .particles .rainbow-particle .bg {
+    background-image: var(--particle-rainbow-col);
+}
+
+.about-me .particles.top .rainbow-particle {
+    mask-image: url(/about-particle-rainbow-top.png);
+    -webkit-mask-image: url(/about-particle-rainbow-top.png);
+}
+
+.about-me .particles.bottom .rainbow-particle {
+    mask-image: url(/about-particle-rainbow-bottom.png);
+    -webkit-mask-image: url(/about-particle-rainbow-bottom.png);
+}
+
+@media screen and (max-width: 1115px) {
+    .about-me {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .about-me {
+        flex-direction: column;
+        gap: 2.8rem;
+    }
+
+    .about-me .desktop {
+        display: none;
+    }
+
+    .about-me .tablet {
+        display: block;
+    }
+
+    .about-me .about-details,
+    .about-me h2 {
+        text-align: center;
+    }
+
+    .about-me h2 {
+        margin: 0;
+    }
+
+    .about-details p {
+        text-align: center;
+        max-width: 600px;
+        margin: 0.8rem auto 0;
+    }
+
+    .about-me .particles.bottom {
+        bottom: -40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-me {
+        gap: 1.8rem;
+    }
+
+    .about-me img {
+        max-width: calc(100% - 1.8rem);
+        width: 320px;
+    }
+
+    .about-details p {
+        font-size: 0.9rem;
+    }
+
+    .about-me .particles {
+        display: none;
+    }
+}

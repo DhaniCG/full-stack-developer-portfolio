@@ -1,0 +1,9 @@
+.home .about-me {
+    margin-top: 12rem !important;
+}
+
+@media screen and (max-width: 500px) {
+    .home .working-process {
+        display: none;
+    }
+}

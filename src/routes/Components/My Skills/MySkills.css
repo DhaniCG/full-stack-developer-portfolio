@@ -1,0 +1,236 @@
+:root {
+    --particle-white-col: linear-gradient(180deg, #ffffff00 0%, #ffffff80 50%, #ffffff00 100%);
+    --particle-rainbow-col: linear-gradient(180deg, #926AFF 0%, #FF77B0 25%, #FFB367 50%, #FF77B0 75%, #926AFF 100%);
+    --glow-line-rainbow-col: conic-gradient(rgba(146, 106, 255, 0)  85%, rgba(255, 119, 176, 0.5) 92.5%,rgb(255, 179, 103)  100%);
+}
+
+.my-skills .tablet {
+    display: none;
+}
+
+.my-skills .skills-container {
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.00) 47.92%, rgba(255, 255, 255, 0.03) 100%), linear-gradient(180deg, rgba(217, 217, 217, 0.10) 0%, rgba(217, 217, 217, 0.15) 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 15px 20px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    padding: 3rem;
+    margin: auto;
+}
+
+.my-skills .skill-item {
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.30);
+    background-color: rgba(0, 0, 0, 0.10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 180px;
+    padding: 1rem;
+}
+
+.my-skills .skill-icon {
+    width: auto;
+    height: 60px;
+}
+
+.my-skills .skill-name {
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: "Onest", sans-serif;
+    font-weight: 600;
+    margin-top: 1.2rem;
+}
+
+.my-skills .particles {
+    position: absolute;
+    top: -80%;
+}
+
+.my-skills .particles .desktop,
+.my-skills .particles .tablet {
+    opacity: 20%;
+}
+
+.my-skills .particles .desktop {
+    width: 395px;
+}
+
+.my-skills .particles .tablet {
+    width: 86px;
+}
+
+.my-skills .particles.left {
+    left: -20%;
+}
+
+.my-skills .particles.right {
+    right: -20%;
+}
+
+.my-skills .particles .mask,
+.my-skills .particles .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.my-skills .particles .mask {
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.my-skills .particles .bg {
+    background-size: 100% 200%;
+    animation: particle-color-effect 2.5s linear infinite;
+}
+
+.my-skills .particles .base-particle .bg {
+    top: 0%;
+    transform: translateY(-100%);
+    background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff80 100%);
+    background-size: contain;
+    height: 50%;
+    animation: base-color-effect 15s linear infinite 10s;
+}
+
+.my-skills .particles.left .base-particle {
+    mask-image: url(/particle-base-left.png);
+    -webkit-mask-image: url(/particle-base-left.png);
+}
+
+.my-skills .particles.right .base-particle {
+    mask-image: url(/particle-base-right.png);
+    -webkit-mask-image: url(/particle-base-right.png);
+}
+
+.my-skills .particles .white-particle .bg {
+    background-image: var(--particle-white-col);
+    animation-duration: 5s;
+}
+
+.my-skills .particles.left .white-particle {
+    mask-image: url(/particle-white-left.png);
+    -webkit-mask-image: url(/particle-white-left.png);
+}
+
+.my-skills .particles.right .white-particle {
+    mask-image: url(/particle-white-right.png);
+    -webkit-mask-image: url(/particle-white-right.png);
+}
+
+.my-skills .particles .rainbow-particle .bg {
+    background-image: var(--particle-rainbow-col);
+}
+
+.my-skills .particles.left .rainbow-particle {
+    mask-image: url(/particle-rainbow-left.png);
+    -webkit-mask-image: url(/particle-rainbow-left.png);
+}
+
+.my-skills .particles.right .rainbow-particle {
+    mask-image: url(/particle-rainbow-right.png);
+    -webkit-mask-image: url(/particle-rainbow-right.png);
+}
+
+@media screen and (max-width: 1115px) {
+    .my-skills .desktop {
+        display: none;
+    }
+
+    .my-skills .tablet {
+        display: inline-block;
+    }
+
+    .my-skills .skill-icon {
+        width: auto;
+        height: 50px;
+    }
+
+    .my-skills .skill-item {
+        width: 165px;
+    }
+
+    .my-skills .skill-name {
+        margin-top: 0.6rem;
+    }
+
+    .my-skills .particles {
+        position: absolute;
+        top: -90%;
+    }
+
+    .my-skills .particles.left {
+        left: 0%;
+    }
+    
+    .my-skills .particles.right {
+        right: 0%;
+    }
+
+    .my-skills .particles.left .base-particle {
+        mask-image: url(/particle-base-left-s.png);
+        -webkit-mask-image: url(/particle-base-left-s.png);
+    }
+    
+    .my-skills .particles.right .base-particle {
+        mask-image: url(/particle-base-right-s.png);
+        -webkit-mask-image: url(/particle-base-right-s.png);
+    }
+    
+    .my-skills .particles .white-particle .bg {
+        background-image: var(--particle-white-col);
+        animation-duration: 5s;
+    }
+    
+    .my-skills .particles.left .white-particle {
+        mask-image: url(/particle-white-left-s.png);
+        -webkit-mask-image: url(/particle-white-left-s.png);
+    }
+    
+    .my-skills .particles.right .white-particle {
+        mask-image: url(/particle-white-right-s.png);
+        -webkit-mask-image: url(/particle-white-right-s.png);
+    }
+    
+    .my-skills .particles .rainbow-particle .bg {
+        background-image: var(--particle-rainbow-col);
+    }
+    
+    .my-skills .particles.left .rainbow-particle {
+        mask-image: url(/particle-rainbow-left-s.png);
+        -webkit-mask-image: url(/particle-rainbow-left-s.png);
+    }
+    
+    .my-skills .particles.right .rainbow-particle {
+        mask-image: url(/particle-rainbow-right-s.png);
+        -webkit-mask-image: url(/particle-rainbow-right-s.png);
+    }
+
+    .max-width-wrapper {
+        padding: 0 1.4rem;
+    }
+}
+
+@media screen and (max-width: 881px) {
+    .my-skills .particles {
+        position: absolute;
+        top: -70%;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .my-skills .particles {
+        display: none;
+    }
+}

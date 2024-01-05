@@ -70,7 +70,7 @@ export default function ServiceForm() {
                 <label>
                     Select Your Budget
                     <div className="wrapper">
-                        <select name="myService" id="my-service">
+                        <select name="budget" id="budget">
                             <option value="I'm Not Sure">I'm Not Sure</option>
                             <option value="Less than $500">Less than $500</option>
                             <option value="$500 - $1000">$500 - $1000</option>

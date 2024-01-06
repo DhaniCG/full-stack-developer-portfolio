@@ -207,6 +207,7 @@
     }
 
     .about-me img {
+        display: block;
         max-width: calc(100% - 1.8rem);
         width: 320px;
         margin: auto;

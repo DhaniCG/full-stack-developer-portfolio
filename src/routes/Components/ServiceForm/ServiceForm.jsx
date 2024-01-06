@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Form, redirect, useSearchParams } from "react-router-dom";
+import axios from "axios";
 
 import "./ServiceForm.css";
 
@@ -7,6 +8,8 @@ export const action = async ({ request }) => {
     try {
         const formData = Object.fromEntries(await request.formData());
         console.log(formData);
+        const { data } = await axios.post("https://portolio-api.netlify.app/form-submission", formData);
+        console.log(data);
         return redirect("/thank-you");
     } catch (err) {
         console.error(err);

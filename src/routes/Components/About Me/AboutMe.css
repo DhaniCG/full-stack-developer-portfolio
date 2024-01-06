@@ -209,6 +209,7 @@
     .about-me img {
         max-width: calc(100% - 1.8rem);
         width: 320px;
+        margin: auto;
     }
 
     .about-details p {

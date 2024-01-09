@@ -70,6 +70,7 @@
     top: 50%;
     left: 2px;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     width: 15px;
     height: 15px;
     transition: ease-in-out 250ms;
@@ -91,6 +92,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     width: 200px;
     height: 2px;
 }
@@ -154,11 +156,13 @@
     right: 0;
     width: 20px;
     transform: translateY(-50%) rotate(0deg);
+    -webkit-transform: translateY(-50%) rotate(0deg);
     transition: ease-in-out 250ms;
 }
 
 .current-service.switched img {
     transform: translateY(-50%) rotate(180deg);
+    -webkit-transform: translateY(-50%) rotate(180deg);
 }
 
 .service-item .service-name {
@@ -389,6 +393,7 @@
 .service-item.special .particles .base-particle .bg {
     top: 0%;
     transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
     background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff80 100%);
     background-size: contain;
     height: 50%;

@@ -11,7 +11,7 @@ export default function ErrorPage() {
     <div className="section error-page max-width-wrapper">
       <h1 className="rainbow-text">{ error.status }</h1>
       <h3>{error.statusText || error.message}</h3>
-      <p>{ error.error.message.replace("route", "page") || "Oops, something's wrong" }</p>
+      <p>{ error.message || "Oops, something's wrong" }</p>
       <div className="btns">
         <a href="/" className="btn secondary">
             <img src="/back-arrow.svg" alt="" />
@@ -21,3 +21,5 @@ export default function ErrorPage() {
     </div>
   );
 }
+
+// .error.message.replace("route", "page")

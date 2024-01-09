@@ -87,6 +87,7 @@
     top: 100%;
     left: 0;
     transform: translateY(0%);
+    -webkit-transform: translateY(0%);
     background-image: linear-gradient(180deg, #ffffff80 0%, #ffffff00 100%);
 }
 
@@ -94,6 +95,7 @@
     bottom: 0;
     left: 0;
     transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
     background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff80 100%);
 }
 

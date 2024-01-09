@@ -35,6 +35,7 @@ nav .nav-btns {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     font-size: 1rem;
     gap: 2rem;
 }
@@ -52,6 +53,7 @@ nav .nav-btns a .nav-btn-underline {
     top: calc(100% + 2px);
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     border-radius: 1rem;
     background-color: white;
     width: 0%;
@@ -111,10 +113,12 @@ nav .hamburger-nav .btm {
 nav .hamburger-nav.active .top {
     top: 8px;
     transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
 }
 
 nav .hamburger-nav.active .mid {
     transform: rotateZ(-45deg);
+    -webkit-transform: rotateZ(-45deg);
 }
 
 nav .hamburger-nav.active .btm {
@@ -228,6 +232,7 @@ footer .credit {
         top: 0vh;
         left: 100vw;
         transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
         background-color: #151515;
         font-size: 1.4rem;
         width: 100vw;

@@ -8,11 +8,19 @@ export const action = async ({ request }) => {
     try {
         const formData = Object.fromEntries(await request.formData());
         console.log(formData);
-        const { data } = await axios.post("https://portolio-api.netlify.app/form-submission", formData);
+        const { data } = await axios.post(
+            "https://portfolio-api-ten-hazel.vercel.app/form-submission",
+            formData,
+            { headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        });
         console.log(data);
         return redirect("/thank-you");
     } catch (err) {
         console.error(err);
+        const { data } = await axios.get("https://portfolio-api-ten-hazel.vercel.app/failed-submission");
+        console.log (data);
         return redirect("/failed");
     }
 }
@@ -47,7 +55,7 @@ export default function ServiceForm() {
     const rateChange = e => setRateType(e.target.value);
     
     return (
-        <Form method="post" action="/hire" className="section">
+        <Form method="post" action="/hire" encType="application/x-www-form-urlencoded" className="section">
             <div className="grid">
                 <label>
                     Your Full Name*
@@ -60,7 +68,7 @@ export default function ServiceForm() {
                 <label>
                     Select My Services
                     <div className="wrapper">
-                        <select name="services" id="services" value={ selected } onChange={ serviceChange }>
+                        <select name="services" id="services" value={ selected ? selected : "I'm Not Sure" } onChange={ serviceChange }>
                             <option value="I'm Not Sure">I'm Not Sure</option>
                             <option value="UI/UX Design">UI/UX Design</option>
                             <option value="Front-End Development">Front-End Development</option>
@@ -97,7 +105,7 @@ export default function ServiceForm() {
                 <label>
                     Rate
                     <div className="wrapper">
-                        <select name="rate" id="rate" value={ rateType } onChange={ rateChange }>
+                        <select name="rate" id="rate" value={ rateType ? rateType : "I'm Not Sure" } onChange={ rateChange }>
                             <option value="I'm Not Sure">I'm Not Sure</option>
                             <option value="Hourly">Hourly</option>
                             <option value="Project">Project</option>

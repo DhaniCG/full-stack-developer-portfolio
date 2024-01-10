@@ -18,7 +18,7 @@ export default function Project(props) {
                     <a href={`/case-study/${project.caseStudy}`} className="btn secondary">Case Study</a>
                 </div>
             </div>
-            <img src={ `https://drive.google.com/uc?export=view&id=${project.imageId}` } alt={ `${project.name} Preview` } />
+            <img src={ `https://drive.usercontent.google.com/download?id=${project.imageId}&export=view&authuser=0` } alt={ `${project.name} Preview` } />
         </div>
     );
 }

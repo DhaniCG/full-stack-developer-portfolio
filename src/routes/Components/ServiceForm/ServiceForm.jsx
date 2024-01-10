@@ -55,7 +55,7 @@ export default function ServiceForm() {
     const rateChange = e => setRateType(e.target.value);
     
     return (
-        <Form method="post" action="/hire" netlify={ true } className="section">
+        <form method="post" action="/thank-you" netlify className="section">
             <div className="grid">
                 <label>
                     Your Full Name*
@@ -124,6 +124,6 @@ export default function ServiceForm() {
             </label>
 
             <button type="submit" className="submit">Submit</button>
-        </Form>
+        </form>
     );
 }

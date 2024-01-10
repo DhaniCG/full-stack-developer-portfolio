@@ -34,6 +34,7 @@ export default function ServiceForm() {
     const rate = query.get("rate");
 
     useEffect(() => {
+        document.getElementsByTagName("form")
         setRateType(rate);
         if (service === "ui-ux-design") {
             setSelected("UI/UX Design");
@@ -55,7 +56,7 @@ export default function ServiceForm() {
     const rateChange = e => setRateType(e.target.value);
     
     return (
-        <form method="post" action="/thank-you" netlify className="section">
+        <Form method="post" action="/hire" data-netlify="true" className="section">
             <div className="grid">
                 <label>
                     Your Full Name*
@@ -124,6 +125,6 @@ export default function ServiceForm() {
             </label>
 
             <button type="submit" className="submit">Submit</button>
-        </form>
+        </Form>
     );
 }

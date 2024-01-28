@@ -25,7 +25,7 @@ export const caseStudies = {
                 <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
             </>
         ),
-        previewImgId: ""
+        previewImgLink: ""
     },
 
     2: {
@@ -52,7 +52,7 @@ export const caseStudies = {
                 <p>I like the result, I think the design looks really good, but it's pretty weird that if I just visualize my design without actually looking at it directly, it feels like the design is boring. Maybe that's a sign that the design that I have on this website isn't the best, especially the working process's icons, I think they don't look consistent with the rest of the website. but over all, it's not a bad design</p>
             </>
         ),
-        previewImgId: "11WxcFxJPv-MqzZZ-EPiKeXQT5id0AgNZ"
+        previewImgLink: "https://www.dropbox.com/scl/fi/wzj3dmmnwnhwip2dcesx2/dhanidesigns.jpg?rlkey=wjsdqj7aunxq9bwugngp6cli7&dl=0"
     },
 
     3: {
@@ -79,7 +79,7 @@ export const caseStudies = {
                 <p>I really love the result of this website, I was even surprised I could make something this good (ofcourse it's subjective whether if this website looks good or not). My client also loved the result of this website too, he said I did a really good job, but he was no longer needed it, so I just have it as a UI/UX Design portfolio</p>
             </>
         ),
-        previewImgId: "1tGcxUDlyx7ncY9FpizrH_54ZlqcP_yq9"
+        previewImgLink: "https://www.dropbox.com/scl/fi/k9iseqmtgq4lze232a4xd/23it.jpg?rlkey=9eiqupxhz2tkrabs5nzr0zrri&dl=0"
     },
 
     4: {
@@ -104,6 +104,6 @@ export const caseStudies = {
                 <p>The design looks modern, but also simple which is the type of website design that I loved the most, though, I changed some of the sections in this design, because the original doesn't look that consistent.</p>
             </>
         ),
-        previewImgId: "1eV1zexWmlWtitZwg3N_Gh6De2Lz0jCB_"
+        previewImgLink: "https://www.dropbox.com/scl/fi/7qualkt6t8ft2oikgzj4m/teamup.jpg?rlkey=t3yf8hz6246hu7zfjh2vr97xw&dl=0"
     },
 }

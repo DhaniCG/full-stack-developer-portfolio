@@ -20,7 +20,7 @@ export default function CaseStudy(props) {
             <h3>Results</h3>
             <div>{ caseStudy.results }</div>
 
-            <img src={ `https://drive.google.com/uc?export=view&id=${caseStudy.previewImgId}` } alt={ props.projectName } />
+            <img src={ caseStudy.previewImgLink } alt={ props.projectName } />
         </>
     );
 }

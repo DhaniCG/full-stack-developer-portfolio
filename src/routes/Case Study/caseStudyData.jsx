@@ -52,7 +52,7 @@ export const caseStudies = {
                 <p>I like the result, I think the design looks really good, but it's pretty weird that if I just visualize my design without actually looking at it directly, it feels like the design is boring. Maybe that's a sign that the design that I have on this website isn't the best, especially the working process's icons, I think they don't look consistent with the rest of the website. but over all, it's not a bad design</p>
             </>
         ),
-        previewImgLink: "https://www.dropbox.com/scl/fi/wzj3dmmnwnhwip2dcesx2/dhanidesigns.jpg?rlkey=wjsdqj7aunxq9bwugngp6cli7&dl=0"
+        previewImgLink: "/dhanidesigns.jpg"
     },
 
     3: {
@@ -79,7 +79,7 @@ export const caseStudies = {
                 <p>I really love the result of this website, I was even surprised I could make something this good (ofcourse it's subjective whether if this website looks good or not). My client also loved the result of this website too, he said I did a really good job, but he was no longer needed it, so I just have it as a UI/UX Design portfolio</p>
             </>
         ),
-        previewImgLink: "https://www.dropbox.com/scl/fi/k9iseqmtgq4lze232a4xd/23it.jpg?rlkey=9eiqupxhz2tkrabs5nzr0zrri&dl=0"
+        previewImgLink: "/23it.jpg"
     },
 
     4: {
@@ -104,6 +104,6 @@ export const caseStudies = {
                 <p>The design looks modern, but also simple which is the type of website design that I loved the most, though, I changed some of the sections in this design, because the original doesn't look that consistent.</p>
             </>
         ),
-        previewImgLink: "https://www.dropbox.com/scl/fi/7qualkt6t8ft2oikgzj4m/teamup.jpg?rlkey=t3yf8hz6246hu7zfjh2vr97xw&dl=0"
+        previewImgLink: "/teamup.jpg"
     },
 }

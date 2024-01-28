@@ -27,7 +27,7 @@ export default function CaseStudyPage() {
                     technologies={ currentProject.technologies } />
             </div>
             <div className="btns">
-                <a href={`/portfolios`} className="btn secondary">
+                <a href="/case-study" className="btn secondary">
                     <img src="/back-arrow.svg" alt="" />
                     Back to Projects
                 </a>
